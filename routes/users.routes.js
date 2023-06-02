@@ -1,15 +1,12 @@
-const { Router } = require("express");
-const {
-  createUser,
-  getUserToDoCategory,
-} = require("../controllers/users.controllers");
+const { Router } = require('express');
+const { createUser, getUserToDoCategory } = require('../controllers/users.controllers');
 
 const router = Router();
 
 // createUser
-router.post("/", createUser);
+router.post('/users', createUser);
 
-// getUserToDoCategory
-router.get("/:id", getUserToDoCategory);
+//getUserToDoCategory
+router.get('/users/:id', getUserToDoCategory)
 
 module.exports = router;
